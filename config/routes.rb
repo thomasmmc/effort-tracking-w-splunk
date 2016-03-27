@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resource :initiatives
-  
+  resource :efforts
+  post "/efforts/submit_efforts",to: "efforts#submit_efforts"
+
   get 'welcome/homepage'
 
   # The priority is based upon order of creation: first created -> highest priority.
