@@ -21,39 +21,25 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> -->
-        <a class="navbar-brand" href="http://weill.cornell.edu/"><img alt="Wcmc logo white" src="/assets/wcmc-logo-white.png" title="WCMC Logo" width="281px" /></a>
+        <a class="navbar-brand" href="/"><img alt="Wcmc logo white" src="/assets/wcmc-logo-white.png" title="WCMC Logo" width="240px" /></a><div class="navbar-header">
       </div>
     </div><!-- /.container-fluid -->
   </nav>
 
   <div class="container main-content">
 
-<center><h1><font color="#B31B1B">Effort Tracking with <img src="/assets/splunk-logo.png" width="281px"></center></h1><br><center></center><br><center><div style="background: #F6F6F6;width: 70%;text-align: left;"><br><center><strong>
-  <%= form_tag do %>
-    Form contents
-  <% end %>
-
-  <%= form_tag("/search", method: "get") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-
-  </div> <!-- end main page container -->
-
-  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+<center><h1><font color="#B31B1B">Effort Tracking with <img src="/assets/splunk-logo.png" width="281px"></center></h1>
+  <center><div style="background: #F6F6F6;width: 70%;text-align: left;"><br><strong>
+<h2>Track your time like its 2016</h2>
+This app is built on Ruby on Rails and utilizes Splunks HTTP Event Collector as its backend database for storing tracked efforts and reporting on efforts
+  </div></center> <!-- end main page container -->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
-
- <p class="text-sc">&copy; 2016 Weill Cornell Medicine. Reproduction, electronic or otherwise, without the permission of Weill Cornell Medicine is strictly forbidden. All Rights Reserved.
-    <span class="pull-right">Version: 0.0.1</span><span class="hidden"></span>
+<p class="text-sc"> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Splunk Efforts Tracker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/thomasmmc/effort-tracking-w-splunk" property="cc:attributionName" rel="cc:attributionURL">Tom Mc Mahon</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+      <span class="pull-right">Version: 0.1.1</span>
       </p>
     </div>
-  </nav>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="/assets/application-4b28d55849a4f81880944b8230c831d3.js"></script>
-  <!-- Typekit fonts -->
-  <script type="text/javascript" src="//use.typekit.net/gog6dck.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</nav>
+
 </body>
 </html>
