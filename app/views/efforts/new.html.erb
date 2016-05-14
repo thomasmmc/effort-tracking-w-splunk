@@ -19,7 +19,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> -->
-        <a class="navbar-brand" href="http://weill.cornell.edu/"><img alt="Wcmc logo white" src="/assets/wcmc-logo-white.png" title="WCMC Logo" width="281px" /></a>
+        <a class="navbar-brand" href="/"><img alt="Wcmc logo white" src="/assets/wcmc-logo-white.png" title="WCMC Logo" width="240px" /></a><div class="navbar-header">
       </div>
     </div><!-- /.container-fluid -->
   </nav>
@@ -27,13 +27,23 @@
   <div class="container main-content">
 
 <h1><font color="#B31B1B">Enter effort information</h1><br>
-
   <%= form_tag "/efforts/submit_efforts" do %>
-    <%= text_field_tag "message", "attended a status meeting" %><br />
-    <%= text_field_tag "category_name", "Engineering" %><br />
-    <%= text_field_tag "initiative", "IAM" %><br />
-    <%= text_field_tag "week", "03/21/2016" %><br />
-    <%= text_field_tag "duration", "60" %><br />
+  <%= hidden_field_tag(:user_id, "tom2010") %>
+    Initiative or Service <%= select_tag(:initiative, options_for_select(@initiative_options)) %> missing initiative or service? <p></p>
 
-    <%= submit_tag "Send to Splunk" %>
+    Efforts Category <%= select_tag(:category_name, options_for_select([['Engineering', 'Engineering'], ['Operations', 'Operations'], ['Architecture', 'Architecture'], ['Management', 'Management'], ], selected: :option )) %> <p></p>
+    Duration <%= text_field_tag :duration, nil, :placeholder => "60", :required => true %> in minuets <p></p>
+    Note/Description <%= text_field_tag :message, "attended a meeting", placeholder: "attended a meeting" %><p></p>
+    Week of <%= select_date Date.today.at_beginning_of_week, prefix: :week %> <br>
+    Begnining of this week was <%= Date.today.at_beginning_of_week%> last week was <%= Date.today.at_beginning_of_week.advance(:days => -7)%> <p></p>
+        <%= submit_tag "Send to Splunk" %>
   <% end %>
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+<p class="text-sc"> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Splunk Efforts Tracker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/thomasmmc/effort-tracking-w-splunk" property="cc:attributionName" rel="cc:attributionURL">Tom Mc Mahon</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+      <span class="pull-right">Version: 0.1.1</span>
+      </p>
+    </div>
+</nav>
