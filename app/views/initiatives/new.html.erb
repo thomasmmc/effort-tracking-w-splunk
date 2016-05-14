@@ -38,15 +38,15 @@
     </nav>
   <div class="container main-content">
 
-<center><h1><font color="#B31B1B">Enter new initiative information</center></h1><br>
+<center><h1><font color="#B31B1B">Enter new initiative or service information</center></h1><br>
 <hr>
 <%= form_for @initiative do |f| -%>
-  Inititative Name <%= f.text_field :name, :placeholder => 'Deploy <X> Project' %> <p></p>
+  Inititative or Service Name <%= f.text_field :name, :placeholder => 'Deploy <X> Project' %> <p></p>
   Reference Number <%= f.text_field :ref, :placeholder => 'SN project or fund' %> <p></p>
   <%= f.submit %>
 <% end -%>
 
-<center><h1><font color="#B31B1B">All existing inititative information</center></h1><br>
+<center><h1><font color="#B31B1B">All existing inititative and service information</center></h1><br>
 <hr>
 
 <% if !@initiatives.blank? %>
