@@ -28,14 +28,26 @@
 
   <div class="container main-content">
 
-<center><h1><font color="#B31B1B">Effort Tracking with <img src="/assets/splunk-logo.png" width="281px"></center></h1>
+<center><h1><font color="#B31B1B">Effort Tracking with <img src="/assets/splunk-logo.png" width="240px"></center></h1>
   <center><div style="background: #F6F6F6;width: 70%;text-align: left;"><br><strong>
 <h2>Track your time like its 2016</h2>
 This app is built on Ruby on Rails and utilizes Splunks HTTP Event Collector as its backend database for storing tracked efforts and reporting on efforts
+<p></p>
+<!-- <center><div style="background-color:#FFFFFF;color:#B31B1B">
+<%= link_to "#{image_tag("/assets/timer_red_md.png")} Submit your efforts".html_safe, new_efforts_url %>
+</div></center> -->
+
+<%= link_to "#{image_tag("/assets/timer_red_md.png")} Submit your efforts".html_safe, new_efforts_url , :class =>"btn btn-default"%>
+<br />
+<%= link_to "#{image_tag("/assets/stats_red_md.png")} Check out the stats".html_safe, new_efforts_url , :class =>"btn btn-default"%>
+<br />
+<%= link_to "#{image_tag("/assets/settings_red_md.png")} Configure initiatives".html_safe, new_initiatives_url , :class =>"btn btn-default"%>
+
   </div></center> <!-- end main page container -->
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
-<p class="text-sc"> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Splunk Efforts Tracker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/thomasmmc/effort-tracking-w-splunk" property="cc:attributionName" rel="cc:attributionURL">Tom Mc Mahon</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+<p class="text-sc"> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Splunk Efforts Tracker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/thomasmmc/effort-tracking-w-splunk" property="cc:attributionName" rel="cc:attributionURL">Tom Mc Mahon</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+  <div>Icons made by <a href="http://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
       <span class="pull-right">Version: 0.1.1</span>
       </p>
     </div>
